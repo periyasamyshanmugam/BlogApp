@@ -1,0 +1,15 @@
+
+<h2>{{blogs[0].title}}</h2>
+<br/>
+<h4>{{blogs[0].author_name}}</h4>
+<p>{{blogs[0].content}}</p>
+<form  [formGroup]="form1" (ngSubmit)="onComent(form1.value)">
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Comment</label>
+  </div>
+<br>
+<a class="waves-effect waves-light btn" href="#">Post</a></form>
+<br>
+<button (click)="upvote()"><i class="material-icons">thumb_up</i>{{blogs[0].upvote}}</button>
+<button (click)="downvote()"><i class="material-icons">thumb_down</i>{{blogs[0].downvote}}</button>
